@@ -1,11 +1,12 @@
 /*********************************************************************************
 *  WEB322 – Assignment 02
-*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part *  of this assignment has been copied manually or electronically from any other source 
+*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  
+*  No part *  of this assignment has been copied manually or electronically from any other source 
 *  (including 3rd party web sites) or distributed to other students.
 * 
 *  Name: __Minjung Kang____ Student ID: __151293198____ Date: __Feb 5 2021_____
 *
-*  Online (Heroku) Link: ________________________________________________________
+*  Online (Heroku) Link: ___https://serene-ravine-26751.herokuapp.com/________________________
 *
 ********************************************************************************/ 
 

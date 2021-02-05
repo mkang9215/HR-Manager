@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Playfair;
+    src: url('PlayfairDisplay-Medium.ttf');
+  }
+  @font-face {
+    font-family: RobotoSlab;
+    src: url('RobotoSlab-Regular.ttf');
+  }
+  
+  body {
+    background-color: Ivory;
+    color: Maroon;
+    font-family: Playfair, sans-serif;
+  }
+
+  nav {
+    background-color: OldLace !important;
+    font-family: RobotoSlab, Roboto;
+  }
+  
+  a {
+    color: indigo !important;
+  }
+  a:hover {
+    color: MediumVioletRed !important;
+  }
+  

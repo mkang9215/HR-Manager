@@ -52,3 +52,73 @@ module.exports.getDepartments = function() {
         resolve(departments);
     });
 }
+
+module.exports.addEmployee = (employeeData) => {
+    return new Promise((resolve, reject) => {        
+        employeeData.charID = employees.length + 1;
+        employeeData.isHero = ( employeeData.isHero) ? true : false;
+        employees.push(employeeData);
+        resolve();
+    });
+}
+
+module.exports.getEmployeesByStatus = (status) => {
+    return new Promise((resolve, reject) => { 
+        var arr = [];
+        
+        for(let i = 0; i < employees.length; i++) {
+            if(employees[i].status == status.replace(/"/g, '')) {
+                arr.push(employees[i]);
+            }
+        }       
+        if(arr.length == 0) {
+            reject("no results returned");
+        }
+        resolve(arr);
+    });
+}
+
+module.exports.getEmployeesByDepartment = (department) => {
+    return new Promise((resolve, reject) => {        
+        var arr = [];
+        for(let i = 0; i < employees.length; i++) {
+            if(employees[i].department == department) {
+                arr.push(employees[i]);
+            }
+        }
+        if(arr.length == 0) {
+            reject("no results returned");
+        }
+        resolve(arr);
+    });
+}
+
+module.exports.getEmployeesByManager = (manager) => {
+    return new Promise((resolve, reject) => {        
+        var arr = [];
+        for(let i = 0; i < employees.length; i++) {
+            if(employees[i].employeeManagerNum == manager) {
+                arr.push(employees[i]);
+            }
+        }
+        if(arr.length == 0) {
+            reject("no results returned");
+        }
+        resolve(arr);
+    });
+}
+
+module.exports.getEmployeeByNum = (num) => {
+    return new Promise((resolve, reject) => {        
+        var arr = [];
+        for(let i = 0; i < employees.length; i++) {
+            if(employees[i].employeeNum == num) {
+                arr.push(employees[i]);
+            }
+        }
+        if(arr.length == 0) {
+            reject("no results returned");
+        }
+        resolve(arr);
+    });
+}

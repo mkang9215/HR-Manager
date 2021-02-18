@@ -116,13 +116,8 @@ app.post("/images/add", upload.single("imageFile"), (req, res) => {
 });
 
 app.get("/images", (req, res) => { 
-    fs.readdir("./public/images/uploaded", function(err, items) {       
-        var files = '['; 
-        for (var i=0; i<items.length; i++) { 
-            files += items[i] + (i == items.length - 1? '' : ', ');
-        }       
-        files += ']'; 
-        res.json({images: files});
+    fs.readdir("./public/images/uploaded", function(err, items) {  
+        res.json({images: items});
     });     
 });
 

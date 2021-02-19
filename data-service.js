@@ -55,8 +55,8 @@ module.exports.getDepartments = function() {
 
 module.exports.addEmployee = (employeeData) => {
     return new Promise((resolve, reject) => {        
-        employeeData.charID = employees.length + 1;
-        employeeData.isHero = ( employeeData.isHero) ? true : false;
+        employeeData.employeeNum = employees.length + 1;
+        employeeData.isManager = ( employeeData.isManager) ? true : false;
         employees.push(employeeData);
         resolve();
     });

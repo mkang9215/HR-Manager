@@ -10,6 +10,10 @@
   body {
     background-color: Ivory;
     color: Maroon;
+  }
+
+  h2 {
+    
     font-family: Playfair, sans-serif;
   }
 
@@ -19,9 +23,9 @@
   }
   
   a {
-    color: indigo !important;
+    color: MediumVioletRed !important;
   }
   a:hover {
-    color: MediumVioletRed !important;
+    color: DeepPink !important;
   }
   

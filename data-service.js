@@ -110,15 +110,26 @@ module.exports.getEmployeesByManager = (manager) => {
 
 module.exports.getEmployeeByNum = (num) => {
     return new Promise((resolve, reject) => {        
-        var arr = [];
+        var foundEmployee = null;
         for(let i = 0; i < employees.length; i++) {
             if(employees[i].employeeNum == num) {
-                arr.push(employees[i]);
+                foundEmployee = employees[i];
             }
         }
-        if(arr.length == 0) {
+        if(!foundEmployee) {
             reject("no results returned");
         }
-        resolve(arr);
+        resolve(foundEmployee);
+    });
+}
+
+module.exports.updateEmployee = (employeeData) => {
+    return new Promise((resolve, reject) => {    
+        for(let i = 0; i < employees.length; i++) {
+            if(employees[i].employeeNum == employeeData.employeeNum) {
+                employees[i] = employeeData;
+                resolve();
+            }
+        }
     });
 }

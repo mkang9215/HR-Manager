@@ -33,10 +33,14 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) {
       cb(null, Date.now() + path.extname(file.originalname));
     }
-  });  
-  const upload = multer({ storage: storage });
+});  
+const upload = multer({ storage: storage });
 
-app.engine('.hbs', exphbs({ extname: '.hbs' }));
+app.engine('.hbs', exphbs({ 
+    extname: '.hbs',
+    defaultLayout: 'main'
+}));
+
 app.set('view engine', '.hbs');
 
 app.use(function(req,res,next){

@@ -17,6 +17,7 @@
   .home {
     font-size: 110%;
     font-weight: 600;
+    list-style-type: none;
   }
 
   h1, h2 {

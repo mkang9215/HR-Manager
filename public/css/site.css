@@ -14,7 +14,12 @@
     font-size: large;
   }
 
-  h2 {
+  .home {
+    font-size: 110%;
+    font-weight: 600;
+  }
+
+  h1, h2 {
     font-family: Playfair, sans-serif;
   }
 
